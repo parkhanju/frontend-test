@@ -11,7 +11,9 @@ function App() {
 
   useEffect(() => {
     const data = async () => {
-      const response = await axios.get("/api/diary?page=1&size=10");
+      const response = await axios.get(
+        "http://3.39.23.168:8080/api/diary?page=1&size=10"
+      );
       setPosts(response.data.dtoList);
     };
     data();
